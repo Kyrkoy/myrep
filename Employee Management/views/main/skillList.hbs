@@ -1,0 +1,22 @@
+<h3><a class="btn btn-secondary" href="/skillEdit"><i class="fa fa-plus"></i>Create New</a>Skill List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th colspan="4">description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each skillList}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td><textarea readonly cols="50">{{this.description}}</textarea></td>
+                <td>
+                    <a href="/skill/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                    <a href="/skill/delete/{{this._id}}" onclick="return confirm('Are you sure?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,53 @@
+<h4>{{viewTitle}}</h4>
+
+
+
+
+<form action="/skillEdit" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{skill._id}}">
+    <center>
+            <div class="form-row" >
+
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Skill Name</label>
+                <input type="text" class="form-control " name="name" placeholder="Skill Name" value="{{skill.name}}">
+                <div class="text-danger">
+                    {{skill.nameError}}</div>
+            </div>
+        </div>
+
+    </div>
+    <center>
+            <div class="form-row" style="padding-bottom:10px">
+        <div class="col-md-6">
+            <label>Description</label>
+            <center>
+                            
+                <textarea type="text" class="form-control" rows="5" name="description" placeholder="Description" >{{skill.description}} </textarea>
+
+            </center>
+
+        </div>
+    </div> 
+    </center>
+
+
+    <div class="form-row" style="dis">
+        <div class="form-group form-row col-md-6 offset-md-0,5" style="padding-right:-15px" >
+            <center>
+                    <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit </button>
+                    <a class="btn btn-secondary" href="/skillList"><i class="fa fa-list-alt"></i> View Skill List </a>
+                    <a class="btn btn-secondary" href="/skillMain"><i class="fa fa-list-alt"></i> Skill Options </a>
+            </center>
+
+        </div>
+    </div>
+    </center>
+
+
+</form>
+
+
+
+
